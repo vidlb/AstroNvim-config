@@ -73,6 +73,7 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+	    -- "pylsp"
     },
   },
   -- Configure require("lazy").setup() options
@@ -115,5 +116,17 @@ return {
       end,
       {}
     )
+    require'lspconfig'.pylsp.setup{
+    settings = {
+      pylsp = {
+        plugins = {
+          pycodestyle = {
+            ignore = {},
+            maxLineLength = 100
+          }
+        }
+      }
+    }
+  }
   end
 }
