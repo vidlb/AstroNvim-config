@@ -18,6 +18,32 @@ return {
   },
   -- Set colorscheme to use
   colorscheme = "catppuccin",
+  plugins = {
+    {
+      "catppuccin/nvim",
+      as = "catppuccin",
+      config = function()
+        require("catppuccin").setup {
+          flavour = "mocha", -- latte, frappe, macchiato, mocha
+          background = { -- :h background
+            light = "latte",
+            dark = "mocha",
+          },
+        transparent_background = true,
+        show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+        term_colors = false,
+        dim_inactive = {
+          enabled = true,
+          shade = "dark",
+          percentage = 0.15,
+        },
+        no_italic = false, -- Force no italic
+        no_bold = false, -- Force no bold 
+      }
+      end,
+    },
+  },
+
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -75,5 +101,19 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-  end,
+    vim.api.nvim_create_user_command(
+      "TransparentBackground",
+       function()
+        vim.cmd("hi Normal guibg=none ctermbg=none")
+        vim.cmd("hi LineNr guibg=none ctermbg=none")
+        vim.cmd("hi Folded guibg=none ctermbg=none")
+        vim.cmd("hi NonText guibg=none ctermbg=none")
+        vim.cmd("hi SpecialKey guibg=none ctermbg=none")
+        vim.cmd("hi VertSplit guibg=none ctermbg=none")
+        vim.cmd("hi SignColumn guibg=none ctermbg=none")
+        vim.cmd("hi EndOfBuffer guibg=none ctermbg=none")
+      end,
+      {}
+    )
+  end
 }

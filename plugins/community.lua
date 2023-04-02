@@ -7,19 +7,6 @@ return {
   { import = "astrocommunity.colorscheme.kanagawa" },
   { import = "astrocommunity.colorscheme.oxocarbon" },
   { import = "astrocommunity.colorscheme.catppuccin" },
-  {
-    -- further customize the options set by the community
-    "catppuccin",
-    opts = {
-      flavour = "mocha", -- latte, frappe, macchiato, mocha
-      background = {
-        -- :h background
-        light = "latte",
-        dark = "mocha",
-      },
-      tansparent_background = true,
-    },
-  },
   --[[
   { import = "astrocommunity.completion.copilot-lua" },
   { -- further customize the options set by the community
