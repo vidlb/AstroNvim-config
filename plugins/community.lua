@@ -1,11 +1,11 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.colorscheme.nightfox" },
-  { import = "astrocommunity.colorscheme.tokyonight" },
-  { import = "astrocommunity.colorscheme.rose-pine" },
-  { import = "astrocommunity.colorscheme.kanagawa" },
-  { import = "astrocommunity.colorscheme.oxocarbon" },
+  --{ import = "astrocommunity.colorscheme.nightfox" },
+  --{ import = "astrocommunity.colorscheme.tokyonight" },
+  --{ import = "astrocommunity.colorscheme.rose-pine" },
+  --{ import = "astrocommunity.colorscheme.kanagawa" },
+  --{ import = "astrocommunity.colorscheme.oxocarbon" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   --[[
   { import = "astrocommunity.completion.copilot-lua" },
